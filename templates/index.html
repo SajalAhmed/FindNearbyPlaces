@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Searh Location</title>
+<style> 
+	input[type=text] {
+	  width: 100%;
+	  box-sizing: border-box;
+	  border: 2px solid #ccc;
+	  border-radius: 4px;
+	  font-size: 16px;
+	  background-color: white;
+	  background-position: 10px 10px; 
+	  background-repeat: no-repeat;
+	  padding: 12px 20px 12px 40px;
+	}
+	li {
+		margin-bottom: 10px;
+		margin-left:15px;
+	}
+	p{ font-size: 22px; }
+</style>
+</head>
+<body>
+<form>
+	<input type="text" name="text" value = "{{request.GET.text}}" placeholder="Enter Location">
+</form>
+<ul>
+{% if places %}
+<p>Nearby location of <strong>{{request.GET.text}}</strong>:</p>
+{% endif %}
+{% for place in places %}
+	<li>{{ place.name }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>

@@ -1,9 +1,6 @@
 # Description
 This is a simple web-based application which shows some nearest place according to the given location and the given location have to be inside in Bangladesh. For build this application I make my own API used google maps python client library. This project can be done without API build. 
 
-URL: http://127.0.0.1:8000 </br>
-API: http://127.0.0.1:8000/api/location
-
 
 # Requirements
 ```
@@ -17,6 +14,16 @@ API: http://127.0.0.1:8000/api/location
     $ pip install djangorestframework
     $ pip install -U googlemaps 
     $ pip install requests
+```
+# How to run project locally
+```
+    1. Download the project.
+    2. Go to FindNearbyPlaces folder
+    3. Open CMD in FindNearbyPlaces location
+    4. Run: python manage.py runserver
+    5. Open the browser to view the project
+    URL: http://127.0.0.1:8000
+    API: http://127.0.0.1:8000/api/location
 ```
 
 # Note

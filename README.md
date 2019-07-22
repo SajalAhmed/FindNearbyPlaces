@@ -1,5 +1,5 @@
 # Description
-This is a simple web-based application which shows some nearest place according to given location. For built this applicaiton I make my own API used google maps Python Client library.
+This is a simple web-based application which shows some nearest place according to the given location and the given location have to be inside in Bangladesh. For build this application I make my own API used google maps python client library. This project can be done without API build. 
 
 URL: http://127.0.0.1:8000 </br>
 API: http://127.0.0.1:8000/api/location

@@ -27,11 +27,14 @@
 </form>
 <ul>
 {% if places %}
-<p>Nearby location of <strong>{{request.GET.text}}</strong>:</p>
+	<p>Nearby location of <strong>{{request.GET.text}}</strong>:</p>
+	{% for place in places %}
+		<li>{{ place.name }}</li>
+	{% endfor %}
+{%elif request.GET %}
+	<p>Location not found for <strong>{{request.GET.text}}</strong></p>
 {% endif %}
-{% for place in places %}
-	<li>{{ place.name }}</li>
-{% endfor %}
+
 </ul>
 </body>
 </html>

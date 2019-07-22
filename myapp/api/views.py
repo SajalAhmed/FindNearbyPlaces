@@ -1,14 +1,10 @@
 import googlemaps
 from rest_framework import viewsets
 from rest_framework.response import Response
-from myapp.api.serializers import TaskSerializer, initModel
+from myapp.api.serializers import LocationSerializer
 
-tasks = {
-    1: initModel(id = 1, text = 'init')
-}
-
-class TaskViewSet(viewsets.ViewSet):
-	serializer_class = TaskSerializer
+class LocationViewSet(viewsets.ViewSet):
+	serializer_class = LocationSerializer
 
 	def list(self, request):
 		return Response({"name":"Invalid Address"})
@@ -22,7 +18,7 @@ class TaskViewSet(viewsets.ViewSet):
 		try:
 			g_ = gmaps.geocode(data_ + ', Bangladesh')[0]
 		except:
-			return Response({"name": "Not Found"})
+			return Response({})
 
 		l_ = g_['geometry']['location']
 

@@ -5,7 +5,7 @@ class initModel(object):
         for field in ('id', 'text'):
             setattr(self, field, kwargs.get(field, None))
 
-class TaskSerializer(serializers.Serializer):
+class LocationSerializer(serializers.Serializer):
 	text = serializers.CharField(max_length=256)
 
 	def create(self, validated_data):

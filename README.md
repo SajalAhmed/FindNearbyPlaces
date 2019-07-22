@@ -1,5 +1,5 @@
 # Description
-This is a simple web-based application which shows some nearest place according to the given location and the given location have to be inside in Bangladesh. For build this application I make my own API used google maps python client library. This project can be done without API build. 
+This is a simple web-based application which shows some nearest place according to the given location. For build this application I make my own API used google maps python client library. This project can be done without API build. 
 
 
 # Requirements
